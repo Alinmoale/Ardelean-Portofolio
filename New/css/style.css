@@ -1,0 +1,205 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Smooch Sans", sans-serif;
+  line-height: 1;
+  font-weight: 200;
+  color: #555;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 2rem;
+  z-index: 1;
+  margin-top: 2rem;
+  margin-left: 7rem;
+  font-size: 3rem;
+}
+
+.main-nav-list {
+  position: absolute;
+  font-size: 6rem;
+  top: 0;
+  right: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+  color: white;
+  z-index: 1;
+  margin-top: 2rem;
+  margin-right: 7rem;
+  gap: 40px;
+}
+
+.menu:link,
+.menu:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 2.5rem;
+  transition: all 0.3s;
+  letter-spacing: 0.2rem;
+}
+
+.menu:hover,
+.menu:active {
+  border-bottom: 1px solid white;
+  padding-bottom: 0.4rem;
+}
+
+.background-img {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("../img/building.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 8rem;
+}
+
+/* Hover Images */
+
+.projects-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 5rem;
+  font-weight: normal;
+  margin-bottom: 5rem;
+}
+
+.image-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  justify-items: center;
+  margin-bottom: 8rem;
+}
+
+#img1 {
+  margin-left: 100px;
+}
+
+#img2 {
+  margin-right: 100px;
+}
+
+#img3 {
+  margin-left: 100px;
+}
+
+#img4 {
+  margin-right: 100px;
+}
+
+.image {
+  position: relative;
+  cursor: pointer;
+}
+
+.image__img {
+  display: block;
+  width: 550px;
+  height: 310px;
+}
+
+.image__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.image__overlay > * {
+  transform: translateY(20px);
+  transition: transform 0.5s;
+}
+
+.image__overlay:hover {
+  opacity: 1;
+}
+
+.image__overlay:hover > * {
+  transform: translateY(0);
+}
+
+.image__title {
+  font-size: 4rem;
+  font-weight: 600;
+  justify-content: center;
+}
+
+.image__description {
+  font-weight: 500;
+  font-size: 3rem;
+  margin-top: 0.25em;
+  letter-spacing: 0.2rem;
+  justify-content: center;
+}
+
+.image-link {
+  margin-top: 4rem;
+  color: white;
+  border: none;
+  text-decoration: none;
+  justify-content: center;
+}
+
+.image-link:link,
+.image-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 2.5rem;
+  transition: all 0.3s;
+  letter-spacing: 0.2rem;
+}
+
+.image-link:hover,
+.image-link:active {
+  border-bottom: 1px solid white;
+  padding-bottom: 0.4rem;
+}
